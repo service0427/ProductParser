@@ -1,0 +1,381 @@
+{
+  "timestamp": "2025-06-24T15:15:39.419Z",
+  "user": "techb_pp",
+  "database": "productparser_db",
+  "permissions": {
+    "database": {
+      "can_create": true,
+      "can_connect": true,
+      "can_temp": true
+    },
+    "schemas": [
+      {
+        "schema_name": "public",
+        "owner": "pg_database_owner",
+        "can_create": true,
+        "can_usage": true
+      }
+    ],
+    "tables": [
+      {
+        "schemaname": "public",
+        "tablename": "agent_performance_history",
+        "tableowner": "techb_db",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "schemaname": "public",
+        "tablename": "agents",
+        "tableowner": "techb_db",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "schemaname": "public",
+        "tablename": "daily_stats",
+        "tableowner": "techb_db",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "schemaname": "public",
+        "tablename": "parsing_results",
+        "tableowner": "techb_db",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "schemaname": "public",
+        "tablename": "parsing_results_2025_06_20",
+        "tableowner": "techb_db",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "schemaname": "public",
+        "tablename": "parsing_results_2025_06_21",
+        "tableowner": "techb_db",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      },
+      {
+        "schemaname": "public",
+        "tablename": "test_table",
+        "tableowner": "postgres",
+        "can_select": true,
+        "can_insert": true,
+        "can_update": true,
+        "can_delete": true
+      }
+    ],
+    "grants": [
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agent_performance_history",
+        "privilege_type": "DELETE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agent_performance_history",
+        "privilege_type": "INSERT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agent_performance_history",
+        "privilege_type": "REFERENCES"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agent_performance_history",
+        "privilege_type": "SELECT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agent_performance_history",
+        "privilege_type": "TRIGGER"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agent_performance_history",
+        "privilege_type": "TRUNCATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agent_performance_history",
+        "privilege_type": "UPDATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agents",
+        "privilege_type": "DELETE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agents",
+        "privilege_type": "INSERT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agents",
+        "privilege_type": "REFERENCES"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agents",
+        "privilege_type": "SELECT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agents",
+        "privilege_type": "TRIGGER"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agents",
+        "privilege_type": "TRUNCATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "agents",
+        "privilege_type": "UPDATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "daily_stats",
+        "privilege_type": "DELETE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "daily_stats",
+        "privilege_type": "INSERT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "daily_stats",
+        "privilege_type": "REFERENCES"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "daily_stats",
+        "privilege_type": "SELECT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "daily_stats",
+        "privilege_type": "TRIGGER"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "daily_stats",
+        "privilege_type": "TRUNCATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "daily_stats",
+        "privilege_type": "UPDATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results",
+        "privilege_type": "DELETE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results",
+        "privilege_type": "INSERT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results",
+        "privilege_type": "REFERENCES"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results",
+        "privilege_type": "SELECT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results",
+        "privilege_type": "TRIGGER"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results",
+        "privilege_type": "TRUNCATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results",
+        "privilege_type": "UPDATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_20",
+        "privilege_type": "DELETE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_20",
+        "privilege_type": "INSERT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_20",
+        "privilege_type": "REFERENCES"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_20",
+        "privilege_type": "SELECT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_20",
+        "privilege_type": "TRIGGER"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_20",
+        "privilege_type": "TRUNCATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_20",
+        "privilege_type": "UPDATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_21",
+        "privilege_type": "DELETE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_21",
+        "privilege_type": "INSERT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_21",
+        "privilege_type": "REFERENCES"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_21",
+        "privilege_type": "SELECT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_21",
+        "privilege_type": "TRIGGER"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_21",
+        "privilege_type": "TRUNCATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "parsing_results_2025_06_21",
+        "privilege_type": "UPDATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "test_table",
+        "privilege_type": "DELETE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "test_table",
+        "privilege_type": "INSERT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "test_table",
+        "privilege_type": "REFERENCES"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "test_table",
+        "privilege_type": "SELECT"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "test_table",
+        "privilege_type": "TRIGGER"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "test_table",
+        "privilege_type": "TRUNCATE"
+      },
+      {
+        "grantee": "techb_pp",
+        "table_schema": "public",
+        "table_name": "test_table",
+        "privilege_type": "UPDATE"
+      }
+    ]
+  }
+}
