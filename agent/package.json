@@ -1,0 +1,22 @@
+{
+  "name": "product-parser-agent",
+  "version": "1.0.0",
+  "main": "agent.js",
+  "scripts": {
+    "start": "node agent.js",
+    "dev": "node agent.js",
+    "test": "node test/mock-test.js"
+  },
+  "keywords": ["scraping", "playwright", "chrome"],
+  "author": "",
+  "license": "ISC",
+  "description": "Distributed web scraping agent for ProductParser system",
+  "dependencies": {
+    "express": "^4.18.0",
+    "playwright": "^1.40.0",
+    "axios": "^1.6.0",
+    "winston": "^3.11.0",
+    "dotenv": "^16.3.0",
+    "node-cron": "^3.0.0"
+  }
+}

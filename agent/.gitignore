@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Chrome 프로필 (환경별로 다름)
+profiles/
+*.profile/
+
+# 환경 설정
+.env
+.env.local
+*.local
+
+# 로그
+logs/
+*.log
+
+# 테스트 결과
+test-results/
+coverage/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# 임시 파일
+temp/
+tmp/
+*.tmp
+
+# 스크린샷
+screenshots/
+*.png
+*.jpg
+
+# 캐시
+.cache/
+*.cache
+
+# 플랫폼별 바이너리
+*.exe
+*.dll
+*.so

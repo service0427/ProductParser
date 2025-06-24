@@ -1,0 +1,7 @@
+{
+  "agentId": "PC01-3001",
+  "pcId": "PC01",
+  "port": 3001,
+  "hubUrl": "http://localhost:8080",
+  "heartbeatInterval": 30000
+}

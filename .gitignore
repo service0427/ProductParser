@@ -1,0 +1,58 @@
+# Node modules
+node_modules/
+package-lock.json
+
+# Chrome 프로필 (환경별로 다름)
+profiles/
+AgentProfiles/
+*.profile/
+
+# 환경 설정
+.env
+.env.local
+*.local
+
+# 로그
+logs/
+*.log
+
+# 테스트 결과
+test-results/
+coverage/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 임시 파일
+temp/
+tmp/
+*.tmp
+
+# 스크린샷
+screenshots/
+*.png
+*.jpg
+*.jpeg
+
+# 캐시
+.cache/
+*.cache
+
+# 빌드 결과물
+dist/
+build/
+
+# 데이터베이스
+*.db
+*.sqlite
+
+# 백업
+*.bak
+backup/
