@@ -37,7 +37,7 @@ if ($UpdateOnly -and (Test-Path "$InstallPath\ParserHub")) {
     Set-Location "$InstallPath\ParserHub"
     
     Write-Host "Git pull 실행 중..." -ForegroundColor Yellow
-    git pull origin main
+    git pull origin dev
     
 } else {
     Write-Host "허브 서버 새로 설치" -ForegroundColor Yellow
@@ -79,7 +79,7 @@ Write-Host "`n환경 설정 파일 생성 중..." -ForegroundColor Yellow
 $envContent = @"
 # ParserHub 환경 설정
 NODE_ENV=production
-PORT=3000
+PORT=8888
 
 # PostgreSQL 설정
 DB_HOST=$PostgresHost
@@ -176,7 +176,7 @@ Write-Host "  시작: $InstallPath\start-hub.bat" -ForegroundColor Gray
 Write-Host "  중지: $InstallPath\stop-hub.bat" -ForegroundColor Gray
 Write-Host "  상태: $InstallPath\hub-status.bat" -ForegroundColor Gray
 Write-Host ""
-Write-Host "대시보드: http://localhost:3000" -ForegroundColor Cyan
+Write-Host "대시보드: http://localhost:8888" -ForegroundColor Cyan
 
 # 실행 여부 확인
 if (-not $UpdateOnly) {

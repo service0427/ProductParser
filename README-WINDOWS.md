@@ -8,11 +8,11 @@ PowerShell을 **관리자 권한**으로 실행 후:
 
 ```powershell
 # 기본 설치 (C:\ProductParser)
-irm https://raw.githubusercontent.com/service0427/ProductParser/main/agent/install-from-git.ps1 | iex
+irm https://raw.githubusercontent.com/service0427/ProductParser/dev/agent/install-from-git.ps1 | iex
 
 # 또는 다운로드 후 실행
-curl -o install.ps1 https://raw.githubusercontent.com/service0427/ProductParser/main/agent/install-from-git.ps1
-.\install.ps1 -HubUrl "http://허브서버:3000" -PCIP "61.84.75.16"
+curl -o install.ps1 https://raw.githubusercontent.com/service0427/ProductParser/dev/agent/install-from-git.ps1
+.\install.ps1 -HubUrl "http://허브서버:8888" -PCIP "61.84.75.16"
 ```
 
 ### 2. 허브 서버 설치 (선택사항)
@@ -46,7 +46,7 @@ curl -o install.ps1 https://raw.githubusercontent.com/service0427/ProductParser/
 
 1. **코드 다운로드**
    ```powershell
-   git clone https://github.com/service0427/ProductParser.git C:\ProductParser
+   git clone -b dev https://github.com/service0427/ProductParser.git C:\ProductParser
    cd C:\ProductParser\agent
    ```
 
@@ -61,7 +61,7 @@ curl -o install.ps1 https://raw.githubusercontent.com/service0427/ProductParser/
    PORT=4001
    AGENT_ID=PC-61.84.75.16-4001
    PC_ID=PC-61.84.75.16
-   HUB_URL=http://허브서버:3000
+   HUB_URL=http://허브서버:8888
    PLATFORM=windows
    ```
 

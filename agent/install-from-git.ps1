@@ -3,7 +3,7 @@
 
 param(
     [string]$InstallPath = "C:\ProductParser",
-    [string]$HubUrl = "http://localhost:3000",
+    [string]$HubUrl = "http://localhost:8888",
     [string]$PCName = $env:COMPUTERNAME,
     [string]$PCIP = "61.84.75.16"
 )
@@ -61,7 +61,7 @@ Set-Location $InstallPath
 # 5. GitHub에서 코드 가져오기
 Write-Host "`nGitHub에서 코드 다운로드 중..." -ForegroundColor Yellow
 try {
-    git clone https://github.com/service0427/ProductParser.git .
+    git clone -b dev https://github.com/service0427/ProductParser.git .
     Write-Host "✓ 코드 다운로드 완료" -ForegroundColor Green
 } catch {
     Write-Host "✗ Git clone 실패: $_" -ForegroundColor Red
@@ -165,7 +165,7 @@ Write-Host "=== ProductParser 업데이트 ===" -ForegroundColor Cyan
 # 에이전트 업데이트
 Set-Location "$InstallPath"
 Write-Host "`n에이전트 업데이트 중..." -ForegroundColor Yellow
-git pull origin main
+git pull origin dev
 
 Set-Location "$InstallPath\agent"
 npm install
