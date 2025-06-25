@@ -12,7 +12,7 @@ irm https://raw.githubusercontent.com/service0427/ProductParser/dev/agent/instal
 
 # 또는 다운로드 후 실행
 curl -o install.ps1 https://raw.githubusercontent.com/service0427/ProductParser/dev/agent/install-from-git.ps1
-.\install.ps1 -HubUrl "http://허브서버:8888" -PCIP "61.84.75.16"
+.\install.ps1 -HubUrl "http://허브서버:8888" -PCIP "112.161.209.80"
 ```
 
 ### 2. 허브 서버 설치 (선택사항)

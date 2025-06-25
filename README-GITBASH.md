@@ -24,7 +24,7 @@ chmod +x install-agent.sh
 스크립트 실행 시 다음 정보를 입력합니다:
 - 설치 경로 (기본값: C:/ProductParser)
 - 허브 서버 URL (기본값: http://localhost:8888)
-- PC IP 주소 (기본값: 61.84.75.16)
+- PC IP 주소 (기본값: 112.161.209.80)
 
 ## 설치 후 디렉토리 구조
 
@@ -66,7 +66,7 @@ C:\ProductParser\start-agents.bat
 ### 개별 에이전트 실행
 ```bash
 cd /c/ProductParser/agent
-PORT=4001 AGENT_ID=PC-61.84.75.16-4001 node agent.js
+PORT=4001 AGENT_ID=PC-112.161.209.80-4001 node agent.js
 ```
 
 ### 프로세스 확인

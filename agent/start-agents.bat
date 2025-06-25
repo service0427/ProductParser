@@ -9,7 +9,7 @@ if not exist logs mkdir logs
 
 REM 허브 서버 주소 설정 (실제 주소로 변경 필요)
 set HUB_URL=http://허브서버주소:8888
-set PC_ID=PC-61.84.75.16
+set PC_ID=PC-112.161.209.80
 set PLATFORM=windows
 
 REM Chrome 프로필 디렉토리 생성

@@ -12,7 +12,7 @@ NC='\033[0m'
 # 기본 설정값
 DEFAULT_INSTALL_PATH="C:/ProductParser"
 DEFAULT_HUB_URL="http://localhost:8888"
-DEFAULT_PC_IP="61.84.75.16"
+DEFAULT_PC_IP="112.161.209.80"
 
 # 설치 경로 입력 받기
 echo -e "${CYAN}=== ProductParser Agent 설치 ===${NC}"

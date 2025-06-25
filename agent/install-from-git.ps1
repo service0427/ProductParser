@@ -5,7 +5,7 @@ param(
     [string]$InstallPath = "C:\ProductParser",
     [string]$HubUrl = "http://localhost:8888",
     [string]$PCName = $env:COMPUTERNAME,
-    [string]$PCIP = "61.84.75.16"
+    [string]$PCIP = "112.161.209.80"
 )
 
 $ErrorActionPreference = "Stop"
