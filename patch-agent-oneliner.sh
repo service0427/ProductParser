@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ProductParser 에이전트 패치 스크립트
-# 사용법: curl -sSL https://raw.githubusercontent.com/service0427/ProductParser/dev/patch-agent-oneliner.sh | bash
+# 사용법: curl -sSL https://raw.githubusercontent.com/service0427/ProductParser/main/patch-agent-oneliner.sh | bash
 
 set -e
 
@@ -37,7 +37,7 @@ fi
 echo ""
 echo "[1/4] 새 액션 파일 다운로드..."
 TEMP_FILE=$(mktemp)
-curl -sSL -o "$TEMP_FILE" "https://raw.githubusercontent.com/service0427/ProductParser/dev/agent/actions/naver-shopping-search.js"
+curl -sSL -o "$TEMP_FILE" "https://raw.githubusercontent.com/service0427/ProductParser/main/agent/actions/naver-shopping-search.js"
 
 if [ -s "$TEMP_FILE" ]; then
     mv "$TEMP_FILE" "$AGENT_DIR/actions/naver-shopping-search.js"
