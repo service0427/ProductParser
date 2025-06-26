@@ -19,18 +19,25 @@ elif [ -d "$HOME/agent" ]; then
     AGENT_DIR="$HOME/agent"
 elif [ -d "./agent" ]; then
     AGENT_DIR="./agent"
+elif [ -d "../agent" ]; then
+    AGENT_DIR="../agent"
+elif [ -d "/c/ProductParser/agent" ]; then
+    AGENT_DIR="/c/ProductParser/agent"
+elif [ -d "$PWD/agent" ]; then
+    AGENT_DIR="$PWD/agent"
 else
     echo "❌ 에이전트 디렉토리를 찾을 수 없습니다."
-    echo "지원되는 경로: /opt/product-agent, ~/product-agent, ~/agent, ./agent"
+    echo "지원되는 경로: /opt/product-agent, ~/product-agent, ~/agent, ./agent, ../agent, /c/ProductParser/agent"
+    echo "현재 디렉토리: $PWD"
     exit 1
 fi
 
 echo "✅ 에이전트 디렉토리 발견: $AGENT_DIR"
 
-# 액션 디렉토리 확인
+# 액션 디렉토리 확인 및 생성
 if [ ! -d "$AGENT_DIR/actions" ]; then
-    echo "❌ actions 디렉토리가 없습니다: $AGENT_DIR/actions"
-    exit 1
+    echo "📁 actions 디렉토리가 없어서 생성합니다: $AGENT_DIR/actions"
+    mkdir -p "$AGENT_DIR/actions"
 fi
 
 # 1. 새 액션 파일 다운로드
