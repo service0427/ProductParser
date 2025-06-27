@@ -5,7 +5,7 @@ module.exports = {
   
   async execute(page, params = {}) {
     const startTime = Date.now();
-    const { keyword = '노트북', requestId = 'test', screenshot = false } = params;
+    const { keyword = '노트북', requestId = 'test', screenshot = false, searchUrl } = params;
     
     // 랜덤 지연 시간 추가 (0~2초) - 에이전트 간 경쟁 시뮬레이션
     const randomDelay = Math.random() * 2000;
@@ -15,22 +15,12 @@ module.exports = {
     try {
       console.log(`[naver-shopping-search] Searching for: ${keyword}`);
       
-      // 네이버 메인으로 먼저 이동
-      console.log('[naver-shopping-search] Going to Naver main page first...');
-      await page.goto('https://www.naver.com', {
-        waitUntil: 'networkidle',
-        timeout: 30000
-      });
-      
-      // 잠시 대기
-      await page.waitForTimeout(2000);
-      
-      // 네이버 쇼핑 검색 URL
-      const searchUrl = `https://search.shopping.naver.com/search/all?query=${encodeURIComponent(keyword)}`;
+      // 허브에서 받은 URL 사용 (없으면 기본 URL 생성)
+      const targetUrl = searchUrl || `https://search.shopping.naver.com/ns/search?query=${encodeURIComponent(keyword)}`;
       
       // 페이지 이동
-      console.log('[naver-shopping-search] Now going to shopping search...');
-      await page.goto(searchUrl, {
+      console.log(`[naver-shopping-search] Going to: ${targetUrl}`);
+      await page.goto(targetUrl, {
         waitUntil: 'networkidle',
         timeout: 30000
       });

@@ -143,12 +143,17 @@ app.post('/parse', async (req, res): Promise<void> => {
       const agentUrl = `http://${agentHost}:${agentPort}/execute`;
       console.log(`[Parse] Sending request to agent ${agent.id} at ${agentUrl}`);
       
+      // URL 인코딩
+      const encodedKeyword = encodeURIComponent(keyword);
+      const searchUrl = `https://search.shopping.naver.com/ns/search?query=${encodedKeyword}`;
+      
       return axios.post(agentUrl, {
         action: 'naver-shopping-search',
         params: {
           keyword,
           site,
           requestId,
+          searchUrl, // 완성된 URL 전달
           screenshot: true
         }
       }, {
