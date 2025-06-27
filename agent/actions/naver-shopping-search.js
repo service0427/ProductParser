@@ -15,10 +15,21 @@ module.exports = {
     try {
       console.log(`[naver-shopping-search] Searching for: ${keyword}`);
       
+      // 네이버 메인으로 먼저 이동
+      console.log('[naver-shopping-search] Going to Naver main page first...');
+      await page.goto('https://www.naver.com', {
+        waitUntil: 'networkidle',
+        timeout: 30000
+      });
+      
+      // 잠시 대기
+      await page.waitForTimeout(2000);
+      
       // 네이버 쇼핑 검색 URL
       const searchUrl = `https://search.shopping.naver.com/search/all?query=${encodeURIComponent(keyword)}`;
       
       // 페이지 이동
+      console.log('[naver-shopping-search] Now going to shopping search...');
       await page.goto(searchUrl, {
         waitUntil: 'networkidle',
         timeout: 30000
