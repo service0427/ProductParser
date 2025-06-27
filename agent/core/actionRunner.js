@@ -31,10 +31,10 @@ class ActionRunner {
       });
       
       // 브라우저 실행
-      const browser = await this.launchBrowser();
+      const context = await this.launchBrowser();
       
       try {
-        const page = await browser.newPage();
+        const page = await context.newPage();
         
         // 기본 설정
         await this.setupPage(page);
@@ -51,7 +51,7 @@ class ActionRunner {
         return result;
         
       } finally {
-        await browser.close();
+        await context.close();
       }
       
     } catch (error) {
@@ -102,7 +102,6 @@ class ActionRunner {
     const launchOptions = {
       headless: false,
       args: [
-        `--user-data-dir=${profilePath}`,
         ...platform.getBrowserArgs()
       ],
       // 느린 모션 (디버깅용, 필요시 제거)
@@ -118,7 +117,7 @@ class ActionRunner {
     
     console.log('[ActionRunner] Launching browser...');
     
-    return await chromium.launch(launchOptions);
+    return await chromium.launchPersistentContext(profilePath, launchOptions);
   }
   
   async setupPage(page) {

@@ -139,7 +139,7 @@ app.post('/parse', async (req, res): Promise<void> => {
     const agentPromises: Promise<AgentResponse>[] = selectedAgents.map(agent => {
       // 에이전트 메타데이터에서 URL 가져오기 (없으면 localhost 사용)
       const agentHost = agent.metadata?.host || 'localhost';
-      const agentPort = agent.id.split('-')[2];
+      const agentPort = agent.metadata?.port || agent.id.split('-').pop();
       const agentUrl = `http://${agentHost}:${agentPort}/execute`;
       console.log(`[Parse] Sending request to agent ${agent.id} at ${agentUrl}`);
       

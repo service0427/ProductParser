@@ -23,7 +23,6 @@ class ProfileManager {
       const launchOptions = {
         headless: false,
         args: [
-          `--user-data-dir=${profilePath}`,
           ...platform.getBrowserArgs()
         ]
       };
@@ -35,11 +34,11 @@ class ProfileManager {
         launchOptions.channel = chromeConfig.channel;
       }
       
-      // 브라우저 시작
-      const browser = await chromium.launch(launchOptions);
+      // 브라우저 시작 - launchPersistentContext 사용
+      const context = await chromium.launchPersistentContext(profilePath, launchOptions);
       
       // 기본 설정을 위한 페이지 열기
-      const page = await browser.newPage();
+      const page = await context.newPage();
       
       // 한국어 설정
       await page.goto('chrome://settings/languages');
@@ -49,7 +48,7 @@ class ProfileManager {
       await page.goto('chrome://settings/searchEngines');
       await page.waitForTimeout(2000);
       
-      await browser.close();
+      await context.close();
       
       console.log(`Profile created successfully for port ${port}`);
       
